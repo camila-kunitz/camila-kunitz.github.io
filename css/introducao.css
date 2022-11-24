@@ -1,0 +1,106 @@
+.introducao {
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.introducao img {
+    border-radius: 10px 100px 10px 100px;
+}
+
+.introducao span {
+    color: #70DA1C;
+}
+
+.introducao h1 {
+   font-size: 4.5rem;
+   line-height: 1.125;
+   margin-bottom: 30px;
+   position: relative;
+}
+
+.introducao h1::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url(/assets/img/detalhe.svg) no-repeat center;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    z-index: -1;
+}
+
+.introducao p {
+    font-size: 1.5rem;
+    color: #525252;
+    margin-bottom:40px;
+}
+
+.introducao p::after {
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: url(/assets/img/location.svg) no-repeat;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.introducao a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #a3a3a3;
+    color: white;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 4px
+}
+
+.introducao a:hover {
+    background: #70DA1C;
+    color: aliceblue;
+}
+
+.introducao a:focus {
+    background: #141414;
+    color: #a3a3a3;
+}
+
+@media (max-width: 1000px) {
+    .introducao h1 {
+        font-size: 3rem;
+    }  
+}
+
+@media (max-width: 800px) {
+    .introducao {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .introducao h1 {
+        font-size: 2rem;
+    }  
+    .introducao h1::before {
+        width: 30px;
+        height: 10px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+    .introducao img{
+        display: none;
+    }
+    .introducao p::after{
+        content: '';
+        display: none;
+    }
+}
